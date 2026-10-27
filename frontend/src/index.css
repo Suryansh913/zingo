@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@theme {
+  --color-ink: #202124; --color-mute: #777B85; --color-line: #E6E8EE; --color-soft: #F8F9FC;
+  --color-zpurple: #8b5cf6; --color-zblue: #3b82f6; --color-zpink: #ec4899; --color-zorange: #f59e0b;
+}
+html, body { background: #ffffff; color: #202124; margin: 0; font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+@utility grad { background-image: linear-gradient(135deg, #8b5cf6, #ec4899); }                       /* primary buttons, badges */
+@utility grad-ring { background-image: linear-gradient(45deg, #f59e0b, #ec4899 40%, #8b5cf6 70%, #3b82f6); }  /* story rings */
+.btn { @apply rounded-full px-5 py-2 font-semibold transition active:scale-95 disabled:opacity-50 grad text-white cursor-pointer shadow-sm hover:brightness-105; }
+.btn2 { @apply rounded-full px-4 py-2 font-medium bg-gray-100 text-ink transition hover:bg-gray-200 active:scale-95 disabled:opacity-50 cursor-pointer; }
+.inp { @apply w-full rounded-xl bg-soft border border-line px-4 py-3 text-ink placeholder:text-mute outline-none focus:border-zpurple focus:ring-2 focus:ring-zpurple/20; }
+.snap { scroll-snap-type: y mandatory; } .snap > * { scroll-snap-align: start; }
+.no-scrollbar { scrollbar-width: none; } .no-scrollbar::-webkit-scrollbar { display: none; }
